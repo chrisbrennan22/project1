@@ -1,0 +1,37 @@
+#CONTROLLING DISTANCE
+fighter 'a' footwork + boxing intelligence + headmovement + feints + jab = cda
+fighter 'b' footwork + boxing intelligence + headmovement + feints + jab = cdb
+cda + cdb = cdrt
+(cda / cdrt) * 100 = cdra
+(cdb / cdrt) * 100 = cdrb
+
+# cdra is fighter 'a' controlling distance % for the round
+# cdrb is the fighter 'b' controllig distance % for the round
+
+#The more you control the distance the more you are in range to punch or out of range to not get hit.
+#Maximum punches you can throw in a round is 250 punches so if you control the distance 50% of the round you can only maximum of 125 punches per round.
+# You need to decide the workrate of the fighter in the round, so if you pick 50% workrate, the fighter would throw 125/2 = 62.5 punches in the round.
+
+#ACCURACY OF PUNCHES thrown is decided by;
+fighter 'a' footwork + handspeed + technique + boxing intelligence
+against
+fighter 'b' headmovement + footwork + defence
+# This should give a % of how many thrown punches fighter 'a' actually landed(62.5 thrown)
+# If the above stats for accuracy of punches thrown for each fighter was '50' fighter 'a' would have 200, fighter 'b' would have 150.
+150/200 = .75
+.75 * 100 = 75 (75% punches not landed)
+100-75 = 25 (25% of punches landed in round)
+0.25 * 62.5 = 15.6 punches landed by fighter 'a'
+
+#THE EFFECT OF THE PUNCHES is decided from;
+fighter 'a' handspeed, power, technique and ko power
+against 
+fighter 'b' chin, defence and body defence
+A formula needs to be made for this, where body punches effect dody defence and stamina and head punches chin and defence.
+
+Fighter stamina is also lowered by workrate in previous round + effects of punches landed, but also stamina goes up between rounds depending on original stamina stats.
+
+If a fighter loses 1/4 of chin, body defence or stamina will result in the fighter going down to the canvas.
+
+After all this is actioned, that is the end of the first round and repeats until the end of the fight.]
+
